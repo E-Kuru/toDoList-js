@@ -1,6 +1,7 @@
 var thisTask = document.getElementById('newTask')
 var container = document.getElementById('my-tasks')
-var tasks =[]
+var oneTask = document.getElementsByClassName('task')
+var tasks = []
 
 function onTaskSubmit(){
     var input = thisTask.value
@@ -16,9 +17,10 @@ function onTaskSubmit(){
 
 function adderHtml(array,theDiv){
     array.forEach(function (e){
-        theDiv.innerHTML +=`<div class='task'> <p>${e.value}</p>
-        <button class='delete-button' onClick=deleteTask()>X</button>
-        <button>Modify</button>
+        theDiv.innerHTML +=`
+        <div class='task'> <p>${e.value}</p>
+            <button class='delete-button' onClick=deleteTask()>X</button>
+            <button onClick=modifyHtml(${tasks.indexOf(e)})>Modify</button>
         </div>`
     });
 }
