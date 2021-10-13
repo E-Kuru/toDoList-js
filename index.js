@@ -8,7 +8,7 @@ function onTaskSubmit(){
     thisTask.value = ''
     
     tasks.push(taskAdder)
-    // console.log(tasks);
+    console.log(tasks);
     
     container.innerHTML = "";
     adderHtml(tasks,container);
@@ -25,4 +25,15 @@ function adderHtml(array,theDiv){
 
 function deleteTask (){
     console.log('It clicked');
-}
+   
+   
+       }
+      
+       
+ 
+ 
+    
+  
+
+
+
