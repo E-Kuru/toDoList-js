@@ -18,7 +18,9 @@ function onTaskSubmit(){
 function adderHtml(array,theDiv){
     array.forEach(function (e){
         theDiv.innerHTML +=`
-        <div class='task'> <p>${e.value}</p>
+        <div class='task'> 
+            <p>${e.value}</p>
+            <p>${e.status}</p>
             <button class='delete-button' onClick=deleteTask()>X</button>
             <button onClick=modifyHtml(${tasks.indexOf(e)})>Modify</button>
         </div>`
@@ -36,6 +38,7 @@ function modifyHtml (index){
     <div class='task'>
         <form onsubmit="modifyTask(); return false;">
             <input id='newTaskValue' placeholder=" Ur new task ?" required minlength="1">
+            <input id='newStatusValue' placeholder=" The Status ?" required minlength="1">
             <button type="submit" onClick=modifyTask(${index})>Edit</button>
         </form>
     </div>`
@@ -44,10 +47,13 @@ function modifyHtml (index){
 function modifyTask (index){    
 
     var newValue = document.getElementById('newTaskValue')
+    var newStatus = document.getElementById('newStatusValue')
 
     var input = newValue.value
+    var inputStatus = newStatus.value
     
     tasks[index].value = input
+    tasks[index].status = inputStatus
         
     container.innerHTML = "";
     adderHtml(tasks,container)
