@@ -23,6 +23,12 @@
                         <input id='newTask' placeholder=" Ur task ?" required minlength="1">
                         <button>Add Task</button>
                     </form>
+                    <div class="filter">
+                        <button onclick="getStatus('All')">All</button>
+                        <button onclick="getStatus('To do')">To do</button>
+                        <button onclick="getStatus('doing')">Doing</button>
+                        <button onclick="getStatus('done')">Done</button>
+                    </div>
                 </div>
                 <div id="my-tasks">
 

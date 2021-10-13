@@ -89,6 +89,27 @@ header h2 {
   color: white;
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 50%;
+  /* border: white solid 4px; */
+}
+
+.filter button {
+  margin-left: 2%;
+  width: 20%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
 /* New tasks 'js' */
 
 #my-tasks {
