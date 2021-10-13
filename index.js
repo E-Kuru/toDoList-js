@@ -49,12 +49,19 @@ function modifyTask (index){
     var newValue = document.getElementById('newTaskValue')
     var newStatus = document.getElementById('newStatusValue')
 
+    
     var input = newValue.value
     var inputStatus = newStatus.value
+                
+    if(input === "" || null || undefined){
+        input === tasks[index].value
+        tasks[index].status = inputStatus
     
-    tasks[index].value = input
-    tasks[index].status = inputStatus
-        
+    }
+    else{
+        tasks[index].value = input
+    }
+    
     container.innerHTML = "";
     adderHtml(tasks,container)
 }
