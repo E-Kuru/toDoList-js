@@ -17,12 +17,12 @@ function onTaskSubmit(){
 function adderHtml(array,theDiv){
     array.forEach(function (e){
         theDiv.innerHTML +=`<div class='task'> <p>${e.value}</p>
-        <button class='delete-button'>X</button>
-        <button  onClick=taskClick()>Modify</button>
+        <button class='delete-button' onClick=deleteTask()>X</button>
+        <button>Modify</button>
         </div>`
     });
 }
 
-function taskClick (){
+function deleteTask (){
     console.log('It clicked');
 }
