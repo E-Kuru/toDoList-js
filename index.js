@@ -30,8 +30,8 @@ function adderHtml(array,theDiv){
     });
 }
 
-function deleteTask (){
-    console.log('It clicked');
+function deleteTask (index){
+    
 }
 
 // Ajoute mon élément qui modifiera ma task et son status 
@@ -61,14 +61,22 @@ function modifyTask (index){
     var inputStatus = newStatus.value
                 
     if(input === "" || null || undefined){
-        input === tasks[index].value
-        tasks[index].status = inputStatus
+        input = tasks[index].value
     
     }
     else{
         tasks[index].value = input
     }
+
     
+    if(inputStatus === 'To do' || inputStatus === 'doing'|| inputStatus === 'done'){
+        tasks[index].status = inputStatus
+    }
+    else {
+        inputStatus = tasks[index].status
+    }
+    
+    console.log(tasks);
     container.innerHTML = "";
     adderHtml(tasks,container)
 }
