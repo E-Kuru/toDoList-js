@@ -91,11 +91,36 @@ header h2 {
 
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 50%;
+  /* border: white solid 4px; */
+}
+
+.filter button {
+  margin-left: 2%;
+  width: 20%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
 /* New tasks 'js' */
 
 #my-tasks {
   color: white;
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .task {
@@ -131,8 +156,6 @@ header h2 {
 }
 
 .task form {
-  border: white 4px solid;
-  border: 4px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,7 +167,7 @@ header h2 {
 
 .task form button {
   border-radius: 30px;
-  width: 25%;
+  width: 20%;
   height: 80%;
   border: none;
   -webkit-border-radius: 30px;
@@ -154,6 +177,8 @@ header h2 {
 }
 
 .task form input {
+  margin-left: 4%;
+  text-align: center;
   border-radius: 30px;
   height: 70%;
   border: none;
