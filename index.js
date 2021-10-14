@@ -30,8 +30,11 @@ function adderHtml(array,theDiv){
     });
 }
 
+
+
+
 function deleteTask (index){
-    
+
 }
 
 // Ajoute mon élément qui modifiera ma task et son status 
