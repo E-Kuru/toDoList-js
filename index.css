@@ -82,11 +82,13 @@ header h2 {
   height: 40%;
   border: none;
   border-radius: 30px;
+  color: red;
 }
 
 .task-section .task-part .task-adder button:hover {
   background-color: #696969;
   color: white;
+
 }
 
 /* New tasks 'js' */
@@ -101,9 +103,10 @@ header h2 {
   justify-content: space-around;
   align-items: center;
   font-size: 20px;
-  width: 35%;
+  width: 50%;
   height: 15%;
   margin-top: 1%;
+  
 }
 
 .task button {
@@ -154,4 +157,10 @@ header h2 {
   border-radius: 30px;
   height: 70%;
   border: none;
+  
 }
+ 
+
+
+
+  

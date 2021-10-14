@@ -27,15 +27,28 @@ function adderHtml(array,theDiv){
 
 function deleteTask (){
     console.log('It clicked');
-   
-   
-       }
-      
-       
- 
- 
+}
+
+function modifyHtml (index){
+
+    // container.innerHTML = "";
+    container.innerHTML +=`
+    <div class='task'>
+        <form onsubmit="modifyTask(); return false;">
+            <input id='newTaskValue' placeholder=" Ur new task ?" required minlength="1">
+            <button type="submit" onClick=modifyTask(${index})>Edit</button>
+        </form>
+    </div>`
+}
+
+function modifyTask (index){    
+
+    var newValue = document.getElementById('newTaskValue')
+
+    var input = newValue.value
     
-  
-
-
-
+    tasks[index].value = input
+        
+    container.innerHTML = "";
+    adderHtml(tasks,container)
+}
