@@ -1,6 +1,5 @@
 var thisTask = document.getElementById('newTask')
 var container = document.getElementById('my-tasks')
-var oneTask = document.getElementsByClassName('task')
 var allStatus = document.getElementById('status-select')
 var tasks = []
 
@@ -45,7 +44,6 @@ function deleteTask (index){
 
 function modifyHtml (index){
 
-    // container.innerHTML = "";
     container.innerHTML +=`
     <div class='task'>
         <form onsubmit="modifyTask(); return false;">
