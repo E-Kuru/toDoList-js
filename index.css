@@ -71,29 +71,6 @@ header h2 {
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* .task-section .task-part .task-adder form button {
-  width: 40%;
-  height: 40%;
-  border: none;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-} */
-
 .task-section .task-part .task-adder form input {
   text-align: center;
   width: 40%;
