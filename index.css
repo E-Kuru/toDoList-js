@@ -31,6 +31,7 @@ header h1 {
 }
 
 header h2 {
+  text-align: center;
   font-size: 50px;
 }
 
@@ -185,7 +186,87 @@ header h2 {
   
 }
  
+@media screen and (max-width:600px){
 
+  *:hover{
+    background: fixed;
+  }
 
+  header h1 {
+    font-size: 50px;
+  }
+ 
+  header h2 {
+    font-size: 30px;
+  }
 
+  .task-section .task-part {
+    height: 100%;
+  }
+
+  .task-section .task-part .task-adder {
+    flex-direction: column;
+  }
   
+  .task-section .task-part .task-adder form{
+    width: 100%;
+  }
+
+  #my-tasks{
+    height: 80%;
+    margin-top: 1%;
+  }
+  
+  .filter{
+    width: 100%;
+    height: 60%;
+  }
+  
+  .task{
+    width: 100%;
+    height: 15%;
+  }
+  .task button{
+    height: 45%;
+  }
+}
+
+@media screen and (max-width:1024px){
+  *:hover{
+    background: fixed;
+  }
+
+  header h1 {
+    font-size: 120px;
+  }
+ 
+  header h2 {
+    font-size: 60px;
+  }
+
+  .task-section .task-part {
+    height: 100%;
+  }
+
+  .task-section .task-part .task-adder form{
+    width: 60%;
+  }
+
+  #my-tasks{
+    margin-top: 1%;
+  }
+  
+  .filter{
+    width: 100%;
+    height: 60%;
+  }
+  
+  .task{
+    width: 50%;
+    font-size: 35px;
+  }
+
+  .task button{
+    height: 60%;
+  }
+}
