@@ -81,6 +81,8 @@ function modifyTask (index){
     adderHtml(tasks,container)
 }
 
+// Function qui filtre les status et affiche en fonction de celui ci 
+
 function getStatus (theStatus){
     var todo = tasks.filter(function(stat){
         return stat.status === theStatus
