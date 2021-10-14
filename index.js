@@ -24,13 +24,10 @@ function adderHtml(array,theDiv){
             <p>${e.value}</p>
             <p>${e.status}</p>
             <button class='delete-button' onClick=deleteTask(${tasks.indexOf(e)})>X</button>
-            <button onClick=modifyHtml(${tasks.indexOf(e)})>Modify</button>
+            <button onClick=modifyHtml(${tasks.indexOf(e)})>Edit</button>
         </div>`
     });
 }
-
-
-
 
 function deleteTask (index){
     console.log(index);
