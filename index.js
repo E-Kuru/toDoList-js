@@ -10,7 +10,7 @@ function onTaskSubmit(){
     thisTask.value = ''
     
     tasks.push(taskAdder)
-    // console.log(tasks);
+    console.log(tasks);
     
     container.innerHTML = "";
     adderHtml(tasks,container);
@@ -31,7 +31,11 @@ function adderHtml(array,theDiv){
 }
 
 function deleteTask (index){
-    
+    console.log(index);
+    tasks.splice(index,1)
+    console.log(tasks);
+    container.innerHTML= ''
+    adderHtml(tasks,container)
 }
 
 // Ajoute mon élément qui modifiera ma task et son status 
@@ -62,7 +66,6 @@ function modifyTask (index){
                 
     if(input === "" || null || undefined){
         input = tasks[index].value
-    
     }
     else{
         tasks[index].value = input
