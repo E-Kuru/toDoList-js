@@ -1,6 +1,5 @@
 var thisTask = document.getElementById('newTask')
 var container = document.getElementById('my-tasks')
-var oneTask = document.getElementsByClassName('task')
 var allStatus = document.getElementById('status-select')
 var tasks = []
 
@@ -40,7 +39,6 @@ function deleteTask (index){
 
 function modifyHtml (index){
 
-    // container.innerHTML = "";
     container.innerHTML +=`
     <div class='task'>
         <form onsubmit="modifyTask(); return false;">
@@ -64,7 +62,6 @@ function modifyTask (index){
                 
     if(input === "" || null || undefined){
         input = tasks[index].value
-    
     }
     else{
         tasks[index].value = input
@@ -81,6 +78,8 @@ function modifyTask (index){
     container.innerHTML = "";
     adderHtml(tasks,container)
 }
+
+// Function qui filtre les status et affiche en fonction de celui ci 
 
 function getStatus (theStatus){
     var todo = tasks.filter(function(stat){
