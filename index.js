@@ -10,7 +10,6 @@ function onTaskSubmit(){
     thisTask.value = ''
     
     tasks.push(taskAdder)
-    // console.log(tasks);
     
     container.innerHTML = "";
     adderHtml(tasks,container);
@@ -24,15 +23,18 @@ function adderHtml(array,theDiv){
         <div class='task'> 
             <p>${e.value}</p>
             <p>${e.status}</p>
-            <button class='delete-button' onClick=deleteTask()>X</button>
+            <button class='delete-button' onClick=deleteTask(${tasks.indexOf(e)})>X</button>
             <button onClick=modifyHtml(${tasks.indexOf(e)})>Modify</button>
         </div>`
     });
 }
 
+// Supprime une tâche existante
+
 function deleteTask (index){
-    
-}
+    tasks.splice(index, 1)
+    container.innerHTML = ''
+    adderHtml(tasks,container)}
 
 // Ajoute mon élément qui modifiera ma task et son status 
 
@@ -76,7 +78,6 @@ function modifyTask (index){
         inputStatus = tasks[index].status
     }
     
-    console.log(tasks);
     container.innerHTML = "";
     adderHtml(tasks,container)
 }
@@ -93,22 +94,18 @@ function getStatus (theStatus){
     })
 
     if(theStatus === 'To do'){
-        console.log(theStatus);
         container.innerHTML = ''
         adderHtml(todo,container)
     }
     else if (theStatus === 'doing'){
-        console.log(theStatus);
         container.innerHTML = ''
         adderHtml(doing,container)
     }
     else if (theStatus === 'done'){
-        console.log(theStatus);
         container.innerHTML = ''
         adderHtml(done,container)
     }
     else{
-        console.log('all');
         container.innerHTML = ''
         adderHtml(tasks,container)
     }
